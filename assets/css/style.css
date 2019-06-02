@@ -1,0 +1,32 @@
+.nav {
+    background-color: palevioletred;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-family: monospace;
+    color: white;
+}
+
+.card {
+    margin: 10px auto;
+}
+
+.card-img {
+    height: 250px;
+}
+
+.card-text:last-child {
+    margin: 0px 0px 0px -19px;
+}
+
+.crystal-container {
+    margin: 0 auto;
+}
+
+.crystal-container img {
+     width: 120px;
+     height: 120px;
+}

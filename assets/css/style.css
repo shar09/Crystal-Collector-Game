@@ -1,10 +1,13 @@
+body {
+    background-image: url(../images/background4.jpeg);
+    color: gray;
+}
 .nav {
     background-color: palevioletred;
     padding: 10px;
 }
 
 h2 {
-    text-align: center;
     margin: 0 auto;
     font-family: monospace;
     color: white;
@@ -12,6 +15,8 @@ h2 {
 
 .card {
     margin: 10px auto;
+    border-color: white;
+    background-color: #fce4ec;
 }
 
 .card-img {
@@ -28,9 +33,14 @@ h2 {
 }
 
 .score-container {
-    margin: 0 auto;
+    margin-left: 208px;
 }
 
 .count-container {
+    margin-left: 208px;
+}
+
+#footer-text {
+    color: white;
     margin: 0 auto;
 }

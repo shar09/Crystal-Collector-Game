@@ -33,49 +33,71 @@ $(document).ready(function()
         score=0;
         $("#target-number").text(score);
     };
+
+    function win() {
+            wins++;
+            $("#win-count").text(wins);
+            reset();
+            alert("you win");
+    }
     
-    //$("#images").on("click", function() {
+    function lose() {
+            losses++
+            $("#loss-count").text(losses);
+            reset();
+            alert("you lose");  
+    }
       
-        $("#crystal-1").on("click", function() 
-        {
+    $("#crystal-1").on("click", function() {
         $("#crystal-1").val(crystalNumber1);
         score=score+crystalNumber1;
         $("#target-number").text(score);
-        });
+        if(randomNumber===score) {
+           win();
+        }
 
-        $("#crystal-2").on("click", function() 
-        {
-            $("#crystal-2").val(crystalNumber2);
-            score=score+crystalNumber2;
-            $("#target-number").text(score);
-        });
-        
-            $("#crystal-3").on("click", function() 
-            {
-                $("#crystal-3").val(crystalNumber3);
-                score=score+crystalNumber3;
-                $("#target-number").text(score);
-            }); 
+        if(score>=randomNumber) {
+           lose();
+        }  
+    });
 
-                $("#crystal-4").on("click", function() 
-                {  
-                    $("#crystal-4").val(crystalNumber4);
-                    score=score+crystalNumber4;
-                    $("#target-number").text(score);
-                });
-                if(score===randomNumber)
-                {
-                    wins++;
-                    $("#win-count").text(wins);
-                    reset();
-                }
+    $("#crystal-2").on("click", function() {
+        $("#crystal-2").val(crystalNumber2);
+        score=score+crystalNumber2;
+        $("#target-number").text(score);
+        if(randomNumber===score) {
+            win();
+        }
+    
+        if(score>=randomNumber) {
+            lose();
+            }  
+    });
         
-                if(score>=randomNumber) 
-                {
-                    losses++
-                    $("loss-count").text(losses);
-                    reset();
-                }  
-    //});
+    $("#crystal-3").on("click", function() {
+        $("#crystal-3").val(crystalNumber3);
+        score=score+crystalNumber3;
+        $("#target-number").text(score);
+        if(randomNumber===score) {
+            win();
+        }
+        
+        if(score>=randomNumber) {
+            lose();
+            }  
+    }); 
+
+    $("#crystal-4").on("click", function() {  
+        $("#crystal-4").val(crystalNumber4);
+        score=score+crystalNumber4;
+        $("#target-number").text(score);
+        if(randomNumber===score) {
+            win();
+        }
+            
+        if(score>=randomNumber) {
+            lose();
+        }  
+    });
 });
             

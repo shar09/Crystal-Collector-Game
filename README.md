@@ -1,4 +1,3 @@
-# unit-4-game
 # Crystal Collector Game
     
 ## Here's how the app works:
